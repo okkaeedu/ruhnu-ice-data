@@ -22,7 +22,7 @@ from datetime import datetime, timezone, timedelta
 # Lääs:  Irbe väina läänesuue + avameri ~20.0°E
 # Põhi:  Hiiumaa põhjatipp + Soome lahe suue ~59.2°N
 GRID_LAT_MIN = 56.3
-GRID_LAT_MAX = 59.2
+GRID_LAT_MAX = 60.0
 GRID_LON_MIN = 20.0
 GRID_LON_MAX = 25.0
 GRID_STEP    = 2       # iga 5. CMEMS ruudu punkt (~9 km vahe)
@@ -120,4 +120,5 @@ with open("ruhnu_ice_cmems.json", "w") as f:
 
 print(f"\nSaved {len(days)} days, ~{len(days[0]['pts']) if days else 0} grid pts/day")
 print(f"JSON size estimate: ~{sum(len(json.dumps(d['pts'])) for d in days)//1024} KB for grid data")
+
 
