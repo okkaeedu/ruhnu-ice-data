@@ -1,8 +1,49 @@
 {
-  "updated": "2026-01-01T00:00Z",
+  "updated": "2026-03-05T09:18Z",
   "product": "cmems_mod_bal_phy_anfc_P1D-m",
   "lat": 57.78,
   "lon": 23.28,
-  "source": "Copernicus Marine Service — BALTICSEA_ANALYSISFORECAST_PHY_003_006",
-  "days": []
+  "source": "Copernicus Marine Service \u2014 BALTICSEA_ANALYSISFORECAST_PHY_003_006",
+  "days": [
+    {
+      "date": "2026-03-05",
+      "siconc": 0.85,
+      "sithick": 0.345
+    },
+    {
+      "date": "2026-03-06",
+      "siconc": 0.888,
+      "sithick": 0.318
+    },
+    {
+      "date": "2026-03-07",
+      "siconc": 0.828,
+      "sithick": 0.315
+    },
+    {
+      "date": "2026-03-08",
+      "siconc": 0.852,
+      "sithick": 0.304
+    },
+    {
+      "date": "2026-03-09",
+      "siconc": 0.888,
+      "sithick": 0.286
+    },
+    {
+      "date": "2026-03-10",
+      "siconc": 0.901,
+      "sithick": 0.259
+    },
+    {
+      "date": "2026-03-11",
+      "siconc": 0.892,
+      "sithick": 0.243
+    },
+    {
+      "date": "2026-03-12",
+      "siconc": 0.88,
+      "sithick": 0.223
+    }
+  ]
 }
