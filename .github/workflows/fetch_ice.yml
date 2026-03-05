@@ -1,0 +1,37 @@
+name: Fetch CMEMS Baltic Ice Data
+
+on:
+  schedule:
+    - cron: '15 4 * * *'
+    - cron: '15 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-ice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install copernicusmarine
+        run: pip install copernicusmarine
+
+      - name: Fetch ice data
+        env:
+          CMEMS_USER: ${{ secrets.CMEMS_USER }}
+          CMEMS_PASS: ${{ secrets.CMEMS_PASS }}
+        run: python fetch_ice.py
+
+      - name: Commit and push JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ruhnu_ice_cmems.json
+          git diff --staged --quiet || git commit -m "Update CMEMS ice data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
