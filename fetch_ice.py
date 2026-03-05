@@ -17,10 +17,13 @@ import math
 import numpy as np
 from datetime import datetime, timezone, timedelta
 
-# ── Grid-ala (Liivi laht + Ruhnu ümbrus) ─────────────────────
-GRID_LAT_MIN = 56.8
-GRID_LAT_MAX = 58.8
-GRID_LON_MIN = 21.0
+# ── Grid-ala (Liivi laht + Irbe väin + Sõrve + Kolka) ────────
+# Lõuna: Läti rannik + Kolka neem ~56.3°N
+# Lääs:  Irbe väina läänesuue + avameri ~20.0°E
+# Põhi:  Hiiumaa põhjatipp + Soome lahe suue ~59.2°N
+GRID_LAT_MIN = 56.3
+GRID_LAT_MAX = 59.2
+GRID_LON_MIN = 20.0
 GRID_LON_MAX = 25.0
 GRID_STEP    = 5       # iga 5. CMEMS ruudu punkt (~9 km vahe)
 
